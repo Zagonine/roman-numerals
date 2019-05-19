@@ -1,9 +1,7 @@
-# Install and run project
+## Install and run server in dev mode
 
-## Run server
+`$ cd server && npm i && npm run start`
 
-`$ cd server && npm i && npm run build && npm run serve`
-
-## Run client
+## Install and run client
 
 `$ cd client && npm i && npm run serve`

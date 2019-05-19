@@ -1,0 +1,35 @@
+<div class="row h-100 justify-content-center align-items-center">
+  <div class="col-5 text-center" v-if="loading">
+    <img src="@/assets/loader/tail-spin.svg">
+  </div>
+  <div class="col-5" v-else>
+    <template v-if="!romanNumber">
+      <h2 class="title">Roman number</h2>
+
+      <b-form @submit.prevent="submitGetRomanNumber">
+        <b-form-group id="input-group-number" label-for="input-number">
+
+          <b-form-input
+            id="input-number"
+            v-model="$v.form.number.$model"
+            :state="$v.form.number.$dirty ? !$v.form.number.$invalid : null"
+            type="number"
+            aria-describedby="input-number-feedback"
+            required
+          ></b-form-input>
+
+          <b-form-invalid-feedback id="input-number-feedback">
+            This is a required field and must be a number between 1 to 100
+          </b-form-invalid-feedback>
+
+        </b-form-group>
+
+        <b-button type="submit" variant="primary" class="w-100" :disabled="$v.form.$invalid">Transform</b-button>
+      </b-form>
+    </template>
+    <div class="response-wrapper" v-else>
+      <h2>{{romanNumber}}</h2>
+      <a class="btn btn-link" href @click.prevent="reset">Again?</a>
+    </div>
+  </div>
+</div>

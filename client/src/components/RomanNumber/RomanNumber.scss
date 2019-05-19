@@ -1,0 +1,33 @@
+#input-number {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 120px;
+}
+
+#input-number-feedback {
+  text-align: center;
+}
+
+.response-wrapper {
+  text-align: center;
+
+  h2 {
+    font-size: 100px;
+  }
+
+  a {
+    margin-top: 50px;
+  }
+}
+
+// Do not display arrow of input number
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

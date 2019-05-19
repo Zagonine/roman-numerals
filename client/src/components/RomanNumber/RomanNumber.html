@@ -24,6 +24,10 @@
 
         </b-form-group>
 
+        <div class="alert alert-danger" role="alert" v-if="error">
+          {{error}}
+        </div>
+
         <b-button type="submit" variant="primary" class="w-100" :disabled="$v.form.$invalid">Transform</b-button>
       </b-form>
     </template>

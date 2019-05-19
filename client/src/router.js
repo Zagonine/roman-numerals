@@ -13,6 +13,5 @@ export default new Router({
       name: 'home',
       component: Home
     }
-    // @TODO: catch 404 routing
   ]
 })

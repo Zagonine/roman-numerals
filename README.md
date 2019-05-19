@@ -4,7 +4,7 @@
 
 `$ cd server && npm i && npm run start`
 
-## Install and run client
+## Install and run client in dev mode
 
 `$ cd client && npm i && npm run serve`
 
